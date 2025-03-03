@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Pokémon Explorer',
-  description: 'Explore information about your favorite Pokémon',
+  title: 'Pokemon Explorer',
+  description: 'Explore information about your favorite Pokemon',
 }
 
 export default function RootLayout({ children }) {
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
           <nav className="bg-red-600 text-white p-4 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
               <a href="/" className="text-2xl font-bold">
-                Pokémon Explorer
+                Pokemon Explorer
               </a>
             </div>
           </nav>

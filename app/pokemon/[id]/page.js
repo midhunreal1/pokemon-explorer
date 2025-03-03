@@ -23,7 +23,7 @@ export default function PokemonDetail() {
         const data = await getPokemonDetails(id);
         setPokemon(data);
       } catch (err) {
-        setError('Failed to fetch Pokémon details. Please try again later.');
+        setError('Failed to fetch Pokemon details. Please try again later.');
         console.error(err);
       } finally {
         setLoading(false);
@@ -76,7 +76,7 @@ export default function PokemonDetail() {
           <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
           </svg>
-          Back to all Pokémon
+          Back to all Pokemon
         </Link>
       </div>
       

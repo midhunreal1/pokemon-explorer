@@ -20,7 +20,7 @@ export default function HomePage() {
       const data = await getPokemonList(151); // Fetch first 151 Pokemon
       setPokemonList(data.results);
     } catch (err) {
-      setError('Failed to fetch Pokémon. Please try again later.');
+      setError('Failed to fetch Pokemon. Please try again later.');
       console.error(err);
     } finally {
       setLoading(false);
@@ -47,8 +47,8 @@ export default function HomePage() {
   return (
     <>
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold mb-4">Pokémon Explorer</h1>
-        <p className="text-gray-600">Discover information about your favorite Pokémon!</p>
+        <h1 className="text-4xl font-bold mb-4">Pokemon Explorer</h1>
+        <p className="text-gray-600">Discover information about your favorite Pokemon!</p>
       </div>
       
       <SearchBar onSearch={handleSearch} />
@@ -73,12 +73,12 @@ export default function HomePage() {
         <>
           {pokemonList.length === 0 ? (
             <div className="text-center py-8">
-              <p className="text-2xl text-gray-600">No Pokémon found with that name.</p>
+              <p className="text-2xl text-gray-600">No Pokemon found with that name.</p>
               <button 
                 onClick={fetchPokemon}
                 className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
               >
-                Show All Pokémon
+                Show All Pokemon
               </button>
             </div>
           ) : (

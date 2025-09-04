@@ -7,7 +7,7 @@ export default function SearchBar({ onSearch }) {
     e.preventDefault();
     onSearch(searchTerm);
   };
-  
+
   return (
     <form onSubmit={handleSubmit} className="mb-12">
       <div className="flex w-full max-w-lg mx-auto group">
@@ -20,7 +20,7 @@ export default function SearchBar({ onSearch }) {
         />
         <button
           type="submit"
-          className="px-8 py-4 glass-effect  rounded-r-lg neon-text-cyan hover-glow font-semibold text-lg transition-all group-hover:neon-glow border-l-0"
+          className="px-8 py-4 glass-effect rounded-r-lg neon-text-cyan hover-glow font-semibold text-lg transition-all group-hover:neon-glow border-l-0"
         >
           Search
         </button>

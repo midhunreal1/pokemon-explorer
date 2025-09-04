@@ -1,9 +1,24 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import PokemonCard from './components/PokemonCard';
-import SearchBar from './components/SearchBar';
 import { getPokemonList, searchPokemon } from './services/pokemonService';
+
+const SearchBar = dynamic(() => import('./components/SearchBar'), { 
+  ssr: false,
+  loading: () => (
+    <div className="mb-12">
+      <div className="flex w-full max-w-lg mx-auto group">
+        <div className="flex-grow px-6 py-4 glass-effect rounded-l-lg border border-cyan-500/30 text-lg bg-gray-800/50 animate-pulse h-14"></div>
+        <div className="px-8 py-4 glass-effect rounded-r-lg border-l-0 bg-gray-800/50 animate-pulse w-24"></div>
+      </div>
+      <div className="text-center mt-4">
+        <p className="text-sm text-gray-400">Try searching for "pikachu", "charizard", or any Pokemon name</p>
+      </div>
+    </div>
+  )
+});
 
 export default function HomePage() {
   const [pokemonList, setPokemonList] = useState([]);

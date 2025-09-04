@@ -54,7 +54,6 @@ body::before {
 
 .neon-text-cyan {
   color: var(--neon-cyan);
-  /* text-shadow: 0 0 5px var(--neon-cyan), 0 0 5px var(--neon-cyan), 0 0 5px var(--neon-cyan); */
 }
 
 .neon-text-purple {
